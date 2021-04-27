@@ -1,0 +1,59 @@
+<div class="page">
+    <div class="text">
+    <h2>About Us</h2>
+    <div class="row  justify-content-center">
+        <div class="col-md-8 form-inline">
+            <input type="text" class="form-control mb-2" placeholder="Add Product"
+            #add> 
+            <button class="btn btn-success ml-2" (click)="onAddProduct(add)">Add Product</button>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                    <input type="email" class="form-control" id="search" placeholder="search Product by Name"[(ngModel)]="nameSearch">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Availabilty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of ProductArr | filter:nameSearch">
+                    <th scope="row">{{product.sno}}</th>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td><h5><span class="badge bg-success">{{product.availablity}}</span></h5></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+    </div>
+
+
+
+
+    <!--<h4>{{ value | mapipe:'12' }}</h4>
+    
+   <p>This guide explains how to set up your Angular project to begin using Angular Material. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.</p>
+</div>
+
+    <div class="row">
+    <div class="col-md-6">
+        <app-card>
+            card 1
+        </app-card>
+    </div>
+
+   <ul>
+       <li *ngFor="let name of nameArr">
+       {{name | mapipe:'8'}}</li>
+   </ul>-->
+

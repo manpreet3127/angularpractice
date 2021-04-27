@@ -1,0 +1,10 @@
+<div class="page">
+    <h3>Contact Us</h3>
+    <input type="text" placeholder="Input here..." #val>
+    <button (click)="SubmitValue(val)">Submit Value </button>
+    <app-comp1 *ngIf="comp1Exist" [myValue]="value"> ngContent:{{value}}
+    </app-comp1>
+    <br><br>
+    <button (click)="destroy()" class="btn btn-danger">Remove Component</button>
+</div>
+

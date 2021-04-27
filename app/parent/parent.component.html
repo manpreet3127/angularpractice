@@ -1,0 +1,53 @@
+<div class="page">
+    <div class="text">
+        <h2> Buy Products</h2>
+
+    </div>
+<br>
+<div class="alert alert-light border d-flex align-items center" *ngIf ="addedProduct">
+
+  <strong class="text-success">{{addedProduct}}</strong> &nbsp; is selected and Added in cart
+  <button class="btn btn-success ml-auto">Checkout</button>
+</div>
+    <hr class="mb-3">
+    <div class="row">
+        <div class="col-md-18">
+            <div class="card" style="width: 16rem;"><br>
+                <img src="../../assets/image/laptop.jpg"class="card-img-top" alt="...">
+                <div class="card-body">
+                    <br>
+                  <h3 class="card-title">Laptop</h3><br>
+                  
+                  <button class="btn btn-success" (click)="onSelectProduct('Laptop')">Select this Product</button> 
+                </div>
+              </div>
+              <div class="card" style="width: 16rem;"><br>
+                <img src="../../assets/image/lcd.jpg"class="card-img-top" alt="...">
+                <div class="card-body">
+                    <br>
+                  <h3 class="card-title">LCD</h3><br>
+                  
+                  <button class="btn btn-success" (click)="onSelectProduct('LCD')">Select this Product</button> 
+                </div>
+              </div>
+              <div class="card" style="width: 16rem;"><br>
+                <img src="../../assets/image/iphone.jpg"class="card-img-top" alt="...">
+                <div class="card-body">
+                    <br>
+                  <h3 class="card-title">Mobile</h3>
+                  <br>
+                  <button class="btn btn-success" (click)="onSelectProduct('Mobile')">Select this Product</button> 
+                </div>
+              </div>
+              
+        </div>
+    </div>
+    <app-child class="w-100" 
+    [productSelected]="proSelected" 
+    [selectedProduct]="selProduct"
+     (addedProduct)="onAddedProduct($event)" ></app-child> 
+   
+  
+    
+    
+</div>
